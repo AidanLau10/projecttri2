@@ -1,6 +1,6 @@
 ---
 layout: scheduleStudent
-title: Computer Science Lab Notebook
+title: Binary Logic Time Box
 units: "1,2"
 course: compsci
 ---
