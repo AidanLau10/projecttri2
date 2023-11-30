@@ -1,8 +1,7 @@
-$high-emph: rgba(white, 0.87);
-$med-emph: rgba(white, 0.69); 
+$high-emph: rgba(0, 0, 255, 0.87);  // Blue color with 87% opacity
+$med-emph: rgba(white, 0.69);
 $low-emph: rgba(white, 0.38);
-$dark-grey : #121212; 
-// $dark-grey : #1F1B24;
+$dark-grey: #808080; // Grayer grey color
 $overlay: mix($dark-grey, white, 95%);
 $overlay-light: mix($dark-grey, white, 86%);
 
@@ -16,7 +15,7 @@ a {
 }
 
 a:hover {
-    color:$high-emph !important;
+    color: $high-emph !important;
 }
 
 .site-title, .site-title:visited, .site-nav, .page-link {
@@ -33,7 +32,6 @@ a:hover {
 }
 
 pre, code {
-    // BVas a lighter colour to better highlight short code words
     border-color: $overlay-light;
     background-color: $overlay;
 }
@@ -60,13 +58,13 @@ pre, code {
     background-color: $dark-grey !important;
 }
 
-table th{
+table th {
     background-color: $overlay;
     border-color: $overlay-light;
     color: $high-emph;
 }
 
-table td{
+table td {
     background-color: $dark-grey;
     border-color: $overlay-light;
     color: $med-emph;
@@ -74,7 +72,7 @@ table td{
 
 .flash {
     color: $dark-grey !important;
-    filter: brightness(80%);
+    filter: brightness(60%);
 }
 
 canvas {
@@ -91,15 +89,16 @@ li .post-meta-description {
     color: $med-emph !important;
 }
 
-.search-result-preview{
-    color: lightgray !important; 
+.search-result-preview {
+    color: purple !important; 
 }
 
 .search-result-highlight {
-    color:yellow !important;
-    font-weight:bold !important;
+    color: blue !important;
+    font-weight: bold !important;
 }
 
 .search-results-list-item .search-result-title {
-    color: cornflowerblue !important;
+    color: purple !important;
 }
+
