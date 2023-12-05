@@ -75,11 +75,11 @@
         var questions = [
             {
                 text: "Wheatley is the main antagonist in Portal 2. (True/False)",
-                image: "https://th.bing.com/th?id=OIP.ANfN008bhlikSHWZAaVXSAHaHa&w=80&h=80&rs=1&o=6&pid=5.1"
+                image: "https://th.bing.com/th?id=OSK.c3dadf3f2462d8333547ae755057ce6a&w=148&h=148&c=7&o=6&pid=SANGAM"
             },
             {
                 text: "GLaDOS, the artificial intelligence, is permanently disabled in Portal 2. (True/False)",
-                image: "https://th.bing.com/th/id/OIG.VZTodJ6BzwNCYzHwWQzv?w=270&h=270&c=6&r=0&o=5&pid=ImgGn"
+                image: "https://lastfm.freetls.fastly.net/i/u/ar0/4f44575797e7eae3d22bafb45119a8d8.jpg"
             },
             {
                 text: "Chell, the protagonist, is the only character in the game with a speaking role. (True/False)",
@@ -119,25 +119,29 @@
         }
 
         function checkAnswer() {
-            var radioButtons = document.getElementsByName("answer");
-            var userAnswer = radioButtons[0].checked ? "1" : "0";
+    var radioButtons = document.getElementsByName("answer");
+    var userAnswer = radioButtons[0].checked ? "1" : "0";
 
-            if (userAnswer === answers[currentQuestionIndex]) {
-                playSound("correct.mp3");
-                alert("Correct!");
-            } else {
-                playSound("wrong.mp3");
-                alert("Wrong!");
-            }
+    if (userAnswer === answers[currentQuestionIndex]) {
+        playSound("correct.mp3");
+        setTimeout(function() {
+            alert("Correct!");
+        }, 500); // Delay the alert for 500 milliseconds to allow sound to play
+    } else {
+        playSound("wrong.mp3");
+        setTimeout(function() {
+            alert("Wrong!");
+        }, 500); // Delay the alert for 500 milliseconds to allow sound to play
+    }
 
-            currentQuestionIndex++;
+    currentQuestionIndex++;
 
-            if (currentQuestionIndex < questions.length) {
-                displayQuestion();
-            } else {
-                alert("Quiz completed!");
-            }
-        }
+    if (currentQuestionIndex < questions.length) {
+        displayQuestion();
+    } else {
+        alert("Quiz completed!");
+    }
+}
 
         // Initial display
         displayQuestion();
